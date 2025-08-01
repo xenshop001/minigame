@@ -21,7 +21,7 @@ exports['qte_minigame']:startMinigame()
 
 PÉLDA:
 
-RegisterNetEvent('esx_horgaszat:startMinigame', function()
+`RegisterNetEvent('esx_horgaszat:startMinigame', function()
     local status, err = pcall(function()
         exports['qte_minigame']:startMinigame()
     end)
@@ -29,7 +29,7 @@ RegisterNetEvent('esx_horgaszat:startMinigame', function()
     if not status then
         print("Mini-játék hiba:", err)
     end
-end)
+end)`
 
 
   
