@@ -21,12 +21,18 @@ exports['qte_minigame']:startMinigame()
 
 PÉLDA:
 
+## 🔧 Példa használat
+
+```lua
 RegisterNetEvent('esx_horgaszat:startMinigame', function()
     local status, err = pcall(function()
         exports['qte_minigame']:startMinigame()
     end)
+    if not status then
+        print("Hiba: " .. tostring(err))
     end
 end)
+
 
 
   
