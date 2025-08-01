@@ -1,0 +1,93 @@
+:root {
+  --neon: #00f5ff;
+  --bg: rgba(15, 15, 20, 0.75);
+  --border: rgba(0, 245, 255, 0.3);
+  --success: #00e676;
+  --error: #ff1744;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  font-family: 'Inter', sans-serif;
+}
+
+.qte-panel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg);
+  border: 2px solid var(--border);
+  border-radius: 20px;
+  padding: 40px 50px;
+  width: 480px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+  display: none;
+}
+
+.panel-header h1 {
+  font-size: 26px;
+  color: var(--neon);
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px var(--neon);
+  letter-spacing: 2px;
+}
+
+.qte-keys-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.qte-key {
+  font-size: 28px;
+  padding: 14px 20px;
+  border-radius: 12px;
+  border: 2px solid #444;
+  background-color: #1e1e2a;
+  color: #aaa;
+  transition: 0.2s;
+  box-shadow: inset 0 0 0 transparent;
+}
+
+.qte-key.active {
+  border-color: var(--neon);
+  background-color: rgba(0, 245, 255, 0.2);
+  color: var(--neon);
+  box-shadow: 0 0 12px var(--neon);
+}
+
+.qte-key.incorrect {
+  background-color: var(--error);
+  color: #fff;
+  border-color: var(--error);
+  box-shadow: 0 0 10px var(--error);
+}
+
+.qte-key.success {
+  background-color: var(--success);
+  color: #fff;
+  border-color: var(--success);
+  box-shadow: 0 0 10px var(--success);
+}
+
+.timer-container {
+  width: 100%;
+  height: 12px;
+  background: #333;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: inset 0 0 8px #000;
+}
+
+.timer-fill {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, var(--neon), #0088ff);
+  transition: width linear;
+}
